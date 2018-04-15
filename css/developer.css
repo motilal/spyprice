@@ -1,0 +1,17 @@
+.pad30{
+    min-height:475px
+}
+.imgBlock.center {
+    width: 175px;
+    height: 175px;
+    vertical-align: middle;
+    display: table-cell;
+}
+.img-title {
+    height: 45px;
+    overflow: hidden;
+}
+.product-with-filter-wrapper .cols, .products-wrapper .cols{
+    height: 330px;
+overflow: hidden;
+}
