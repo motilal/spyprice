@@ -56,6 +56,8 @@
                             }
                             ?>
                         </ul>
+                        <a id="view-all-feature" class="view-all" href="javascript:void(0)" style="display: inline;">More</a>
+                        <a id="hide-other-feature" class="view-all" href="javascript:void(0)" style="display: none;">Less</a>
                     </div>
                     <div class="inner">
                         <div class="sidebarheading">
@@ -77,6 +79,8 @@
                             }
                             ?>
                         </ul>
+                        <a id="view-all-brand" class="view-all" href="javascript:void(0)" style="display: inline;">More</a>
+                        <a id="hide-other-brand" class="view-all" href="javascript:void(0)" style="display: none;">Less</a>
                     </div>
                     <div class="inner">
                         <div class="sidebarheading">
@@ -90,7 +94,7 @@
                                     ?>
                                     <li class="<?php echo $key > 4 ? 'hide-merchant' : ''; ?>">
                                         <label>
-                                            <input type="checkbox" class="filter_merchant filter" name="merchantFilter[]" value="<?php echo $merchant->name; ?>" <?php echo (get_input('merchantFilter') && in_array($merchant->name, get_input('brandFilter'))) ? 'checked' : ''; ?>> <?php echo $merchant->name; ?>
+                                            <input type="checkbox" class="filter_merchant filter" name="merchantFilter[]" value="<?php echo $merchant->name; ?>" <?php echo (get_input('merchantFilter') && in_array($merchant->name, get_input('merchantFilter'))) ? 'checked' : ''; ?>> <?php echo $merchant->name; ?>
                                         </label>
                                     </li>
                                     <?php
@@ -98,6 +102,8 @@
                             }
                             ?>
                         </ul>
+                        <a id="hide-other-merchant" class="view-all" href="javascript:void(0)">Less</a>
+                        <a id="view-all-merchant" class="view-all" href="javascript:void(0)">More</a>
                     </div>
                 </ul>
             </div> 
