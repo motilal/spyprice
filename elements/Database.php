@@ -241,9 +241,9 @@ class Database extends DbConfig {
      * @return  string
      */
     protected function limit($limit = null) {
-        if (!empty($limit['limit']) && !isset($limit['offset']) && is_numeric($limit['limit'])) {
+        if (!empty($limit['limit']) && !isset($limit['offset'])) {
             return "LIMIT " . $limit['limit'];
-        } else if (!empty($limit['limit']) && isset($limit['offset']) && is_numeric($limit['limit']) && is_numeric($limit['offset'])) {
+        } else if (!empty($limit['limit']) && isset($limit['offset'])) {
             return "LIMIT " . $limit['offset'] . ", " . $limit['limit'];
         }
     }

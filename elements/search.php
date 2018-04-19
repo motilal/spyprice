@@ -77,7 +77,7 @@ $select = array('`products`.id', '`products`.name', '`products`.image', '`produc
 $total_products = $DB->searchProducts(array('`products`.id'), $where, $having, null, $sorting, true);
 
 /* pagination limit */
-if (get_Input('page') != "") {
+if (get_Input('page') != "" && get_Input('page') > 0) {
     $num_pages = $total_products / PAGINATION_LIMIT;
     if ($total_products % PAGINATION_LIMIT != 0) {
         $num_pages++;
